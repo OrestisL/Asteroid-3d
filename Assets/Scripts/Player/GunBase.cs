@@ -9,7 +9,8 @@ public abstract class GunBase : MonoBehaviour
     protected float FireDelay = 0.5f;
     protected float AltFireDelay = 1.0f;
 
-    protected float _delay, _altDelay;
+    private float _delay, _altDelay;
+
     protected virtual void Start()
     {
         var fire = InputSystem.actions.FindAction("Click");
