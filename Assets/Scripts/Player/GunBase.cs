@@ -23,7 +23,7 @@ public abstract class GunBase : MonoBehaviour
         _altDelay = AltFireDelay;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         _delay -= Time.deltaTime;
         if (_delay <= 0) _delay = FireDelay;

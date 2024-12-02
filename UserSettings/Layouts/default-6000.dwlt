@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 797.60004
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -1026,9 +1026,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 0, y: -0.16999996, z: -0.29269636}
+    m_Target: {x: 3.5912943, y: -0.03440237, z: 149.94713}
     speed: 2
-    m_Value: {x: 0, y: -0.16999996, z: -0.29269636}
+    m_Value: {x: 3.5912943, y: -0.03440237, z: 149.94713}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1074,13 +1074,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.073162444, y: -0.86791426, z: 0.13437007, w: 0.47256526}
+    m_Target: {x: 0.061589763, y: -0.91899127, z: 0.15926541, w: 0.3553842}
     speed: 2
-    m_Value: {x: -0.0731624, y: 0.8679137, z: -0.13437, w: -0.472565}
+    m_Value: {x: -0.06158971, y: 0.9189905, z: -0.15926528, w: -0.3553839}
   m_Size:
-    m_Target: 15.20216
+    m_Target: 7.5129867
     speed: 2
-    m_Value: 15.20216
+    m_Value: 7.5129867
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_LastDebugDrawMode: 35
-  m_ViewIsLockedToObject: 1
+  m_ViewIsLockedToObject: 0
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1230,7 +1230,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/Player
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1240,16 +1240,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/Player
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Orestis\Desktop\unity projects\Asteroid 3d
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: caa40000
-    m_LastClickedID: 42186
-    m_ExpandedIDs: 00000000caa40000cca40000cea40000d0a40000
+    m_SelectedIDs: 10a70000
+    m_LastClickedID: 42768
+    m_ExpandedIDs: 00000000d6a40000d8a40000daa40000dca40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1278,7 +1278,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000caa40000cca40000cea40000d0a40000
+    m_ExpandedIDs: 00000000d6a40000d8a40000daa40000dca40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1306,7 +1306,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000e26800003477000056650000108f0000b401000028e60000f826010000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1374,7 +1374,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -22304
+  m_LastSelectedObjectID: -10766
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
