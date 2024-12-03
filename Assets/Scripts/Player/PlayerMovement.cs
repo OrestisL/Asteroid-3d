@@ -13,9 +13,11 @@ public class PlayerMovement : MonoBehaviour
     public float CurrentSpeed => _running ? RunSpeed : WalkSpeed;
 
     private InputAction _moveAction;
-    private InputAction _runAction;
-    [SerializeField]
-    private Camera _mainCam;
+
+    // sounds
+    public AudioClip EngineSound;
+    public float WalkPitch, RunPitch;
+    private AudioSource _source;
 
     private void Start()
     {
@@ -23,11 +25,15 @@ public class PlayerMovement : MonoBehaviour
 
         _moveAction = InputSystem.actions.FindAction("Move");
 
-        _runAction = InputSystem.actions.FindAction("Sprint");
-        _runAction.started += (_) => _running = true;
-        _runAction.canceled += (_) => _running = false;
+        var _runAction = InputSystem.actions.FindAction("Sprint");
+        _runAction.started += (_) => { _running = true; _source.pitch = RunPitch; };
+        _runAction.canceled += (_) => { _running = false; _source.pitch = WalkPitch; };
 
-        _mainCam = Camera.main;
+        _source = GetComponent<AudioSource>();
+        _source.pitch = WalkPitch;
+        _source.clip = EngineSound;
+        _source.loop = true;
+        _source.Play();
     }
 
     private void Update()
