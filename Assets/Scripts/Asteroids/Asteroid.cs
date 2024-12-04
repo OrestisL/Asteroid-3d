@@ -3,7 +3,10 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
     public float Health;
+    public float Score;
     private float _maxHealth;
+
+    public float Speed = 15.0f;
 
     public GameObject DeathParticle;
     public AudioClip DeathSound;
@@ -21,16 +24,29 @@ public class Asteroid : MonoBehaviour
         _asteroidMat.SetColor("_Color", _asteroidColor.Evaluate(1));
     }
 
+    private void Update()
+    {
+        transform.position += Time.deltaTime * Speed * Vector3.back;
+    }
+
     public void DoDamage(float damage) 
     {
         Health -= damage;
-        _asteroidMat.SetColor("_Color", _asteroidColor.Evaluate(Health / _maxHealth));
+        _asteroidMat.SetColor("_BaseColor", _asteroidColor.Evaluate(Health / _maxHealth));
 
         if (Health <= 0) 
         {
             Instantiate(DeathParticle, transform.position, Quaternion.identity);
             _audioSource.PlayOneShot(DeathSound);
-            Destroy(gameObject, 5f);
+            ScoreManager.Instance.AddScore(Score);
+            Destroy(gameObject);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!collision.gameObject.CompareTag("Player")) return;
+
+        collision.gameObject.GetComponent<PlayerHealth>().Kill();
     }
 }

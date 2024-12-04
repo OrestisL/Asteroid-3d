@@ -8,7 +8,7 @@ public class ProjectileBase : MonoBehaviour
     public float RadiusOfEffect = 1.0f;
     public float LifeTime = 20.0f;
 
-    protected float MovementSpeed = 25.0f;
+    protected float MovementSpeed = 120.0f;
     protected float RotationSpeed = 50.0f;
     private float _rotAngle;
 

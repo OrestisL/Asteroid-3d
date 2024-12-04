@@ -566,15 +566,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 13ff7a24af2cf7a4f952c385f6e3975f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.35
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13ff7a24af2cf7a4f952c385f6e3975f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.35
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13ff7a24af2cf7a4f952c385f6e3975f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.35
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13ff7a24af2cf7a4f952c385f6e3975f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -672,14 +672,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b0d79268862d64abe0adf1d36c1111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 0
+  Damage: 35
   HitLayers:
     serializedVersion: 2
     m_Bits: 64
   RadiusOfEffect: 1
-  LifeTime: 20
+  LifeTime: 12
   DeathParticle: {fileID: 0}
-  DeathSound: {fileID: 0}
+  DeathSound: {fileID: 8300000, guid: 97f3ca12fd6a37642aca78c69f9d6499, type: 3}
 --- !u!64 &4369150689355730751
 MeshCollider:
   m_ObjectHideFlags: 0

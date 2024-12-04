@@ -45,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 move = _moveAction.ReadValue<Vector2>();
         Move(move);
+
+        if (_inputEnabled)
+            ScoreManager.Instance.AddScore(Time.deltaTime);
     }
 
     private void Move(Vector2 input)
@@ -57,12 +60,12 @@ public class PlayerMovement : MonoBehaviour
         Controller.Move(Time.deltaTime * CurrentSpeed * inputDirection);
     }
 
-    private void Sprint(InputAction.CallbackContext ctx) 
+    private void Sprint(InputAction.CallbackContext ctx)
     {
         bool isButtonPressed = ctx.phase == InputActionPhase.Performed;
 
         _running = isButtonPressed;
-        _source.pitch = isButtonPressed? RunPitch : WalkPitch;
+        _source.pitch = isButtonPressed ? RunPitch : WalkPitch;
     }
 
     private void OnDestroy()
