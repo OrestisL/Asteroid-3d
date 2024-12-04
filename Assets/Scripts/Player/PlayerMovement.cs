@@ -19,16 +19,21 @@ public class PlayerMovement : MonoBehaviour
     public float WalkPitch, RunPitch;
     private AudioSource _source;
 
+    [SerializeField]
+    private bool _inputEnabled = false;
+
     private void Start()
     {
         Controller = GetComponent<CharacterController>();
 
         _moveAction = InputSystem.actions.FindAction("Move");
 
-        var _runAction = InputSystem.actions.FindAction("Sprint");
-        _runAction.started += (_) => { _running = true; _source.pitch = RunPitch; };
-        _runAction.canceled += (_) => { _running = false; _source.pitch = WalkPitch; };
-
+        if (!_inputEnabled)
+        {
+            var _runAction = InputSystem.actions.FindAction("Sprint");
+            _runAction.started += (_) => { _running = true; _source.pitch = RunPitch; };
+            _runAction.canceled += (_) => { _running = false; _source.pitch = WalkPitch; };
+        }
         _source = GetComponent<AudioSource>();
         _source.pitch = WalkPitch;
         _source.clip = EngineSound;
@@ -47,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         float x = input.x;
         float y = input.y;
 
-        Vector3 inputDirection = new Vector3(x, y, 1);
+        Vector3 inputDirection = _inputEnabled ? new Vector3(x, y, 1) : Vector3.forward;
 
         Controller.Move(Time.deltaTime * CurrentSpeed * inputDirection);
     }
