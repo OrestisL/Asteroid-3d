@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: -1536
+    x: 0
     y: 34.4
     width: 1536
     height: 797.60004
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -422,7 +422,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f8faffff
+      m_ExpandedIDs: c4c7ffff94c8ffff5ac9ffff16ceffffbeceffff4cd2ffffc4ebffff48f5ffffc2f5fffff8faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1230,7 +1230,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/3d Models
+    - Assets/BGM
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1240,16 +1240,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/3d Models
+  - Assets/BGM
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Orestis\Desktop\unity projects\Asteroid 3d
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 83.60004}
-    m_SelectedIDs: eea60000
-    m_LastClickedID: 42734
-    m_ExpandedIDs: 0000000008a500000aa500000ca500000ea5000010a50000
+    scrollPos: {x: 0, y: 15.599976}
+    m_SelectedIDs: 50a70000
+    m_LastClickedID: 42832
+    m_ExpandedIDs: 00000000bea40000c0a40000c2a40000c4a40000c6a40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1278,7 +1278,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000008a500000aa500000ca500000ea5000010a50000
+    m_ExpandedIDs: 00000000bea40000c0a40000c2a40000c4a40000c6a40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1410,7 +1410,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1302
+  m_LastSelectedObjectID: -5296
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1454,7 +1454,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 97.600006
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

@@ -31,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
         if (!_inputEnabled)
         {
             var _runAction = InputSystem.actions.FindAction("Sprint");
-            _runAction.started += (_) => { _running = true; _source.pitch = RunPitch; };
-            _runAction.canceled += (_) => { _running = false; _source.pitch = WalkPitch; };
+            _runAction.performed += Sprint;
+            _runAction.canceled += Sprint;
         }
         _source = GetComponent<AudioSource>();
         _source.pitch = WalkPitch;
@@ -55,5 +55,20 @@ public class PlayerMovement : MonoBehaviour
         Vector3 inputDirection = _inputEnabled ? new Vector3(x, y, 1) : Vector3.forward;
 
         Controller.Move(Time.deltaTime * CurrentSpeed * inputDirection);
+    }
+
+    private void Sprint(InputAction.CallbackContext ctx) 
+    {
+        bool isButtonPressed = ctx.phase == InputActionPhase.Performed;
+
+        _running = isButtonPressed;
+        _source.pitch = isButtonPressed? RunPitch : WalkPitch;
+    }
+
+    private void OnDestroy()
+    {
+        var _runAction = InputSystem.actions.FindAction("Sprint");
+        _runAction.performed -= Sprint;
+        _runAction.canceled -= Sprint;
     }
 }
